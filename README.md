@@ -25,6 +25,7 @@ In other words it proves what exists, doesn't guess what it cannot prove and unk
 ---
 **Query:**  
 Does function A call function B?
+
 **Result**
 ```
 Status: PROVEN
