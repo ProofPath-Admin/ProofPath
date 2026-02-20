@@ -1,11 +1,51 @@
 # Proofpath
 
-**Deterministic software analysis through compiler-verified structural truth.**
+**Deterministic claims about software behavior from compiler-verified structure.**
 
-Proofpath is a system for answering bounded questions about program behavior using extracted structural facts, deterministic reasoning, and auditable evidence chains.
+Proofpath is not a traditional static analyzer. Proofpath is a deterministic claim engine.
+Static analyzers attempt to detect potential defects. Proofpath establishes verifiable structural truth.
 
-The system produces reproducible results tied to a specific build and environment.
+It answers precise, bounded questions about program structure and behavior and produces verifiable evidence for each claim.
+A claim is a precise statement about program structure or behavior that can be derived and reproduced under defined conditions.
 
+In other words it proves what exists, doesn't guess what it cannot prove and unknown unknown states are represented explicitly.
+
+
+---
+## Example questions Proofpath may answer:
+
+- Does function A call function B in this build?
+- What allocation path leads to this memory write?
+- Where is this macro expanded in the compiled program?
+- What code paths can reach this state?
+
+---
+
+## Example answers Proofpath may give:
+---
+Query:
+Does function A call function B?
+
+Result:
+Status: PROVEN
+Evidence: Call expression found in A at src/foo.cpp:128
+Scope: Build clang-18.1.0 -O2
+---
+Query:
+Does function A call function C?
+
+Result:
+Status: FALSE
+Evidence: No call path found in extracted call graph
+Scope: Build clang-18.1.0 -O2
+---
+Query:
+Can user input reach this memory write?
+
+Result:
+Status: UNKNOWN
+Reason: Required structural facts unavailable (external dependency)
+Scope: Build clang-18.1.0 -O2
 ---
 
 ## Why Proofpath Exists
