@@ -37,7 +37,52 @@ This phase established the need for structural program understanding rather than
 
 ---
 
-## 3. Failure of Heuristic Reasoning
+## 3Architectural Direction Through Failure
+Proofpath architecture did not emerge from a predefined system design.
+It evolved through repeated failure of prior approaches to achieve reliable software reasoning.
+Early experimentation revealed fundamental limitations in heuristic and probabilistic approaches:
+large codebases exceeded model context capacity
+reasoning results were inconsistent
+outputs were not reproducible
+system behavior was opaque
+repeated queries required recomputation
+claims lacked verifiable provenance
+Each limitation imposed a design constraint that shaped subsequent system architecture.
+Observed failures produced corresponding architectural responses:
+non-reproducible outputs → deterministic reasoning requirement
+context limitations → bounded analysis scope
+ambiguous interpretation → structural fact extraction
+repeated recomputation → persistent derived fact storage
+opaque results → evidence chains and provenance tracking
+uncontrolled complexity → normalized program representation
+Through this process, the system evolved toward deterministic operation over verifiable inputs.
+The architecture therefore reflects constraint discovery rather than theoretical design.
+Each subsystem exists to eliminate a previously observed failure mode.
+
+## 4. Implementation Discipline and Architectural Stability
+Proofpath development follows strict implementation constraints to prevent architectural drift and uncontrolled system complexity.
+The system is developed through:
+small deterministic subsystems
+explicit behavioral guarantees
+measurable system properties
+bounded scope expansion
+implementation evidence prior to conceptual expansion
+New capabilities are introduced only when:
+their behavior can be defined precisely
+their inputs and outputs are explicitly specified
+their execution is reproducible
+their results can be audited
+their failure modes are defined
+Architectural decisions prioritize long-term determinism and stability over rapid feature growth.
+The system explicitly avoids:
+speculative functionality without defined guarantees
+uncontrolled expansion of reasoning scope
+implicit system behavior
+hidden state or undocumented inference
+architecture driven solely by conceptual completeness
+This implementation discipline ensures that Proofpath remains a deterministic system grounded in observable behavior rather than theoretical capability.
+
+## 5. Failure of Heuristic Reasoning
 
 A critical realization emerged:
 
@@ -53,7 +98,7 @@ This constraint shaped all subsequent architecture.
 
 ---
 
-## 4. Discovery of Bounded Truth
+## 6. Discovery of Bounded Truth
 
 Further investigation revealed that reliable reasoning about software requires strict environmental constraints.
 
@@ -76,7 +121,7 @@ This became a core principle of Proofpath.
 
 ---
 
-## 5. Emergence of Deterministic Architecture
+## 7. Emergence of Deterministic Architecture
 
 To support bounded deterministic reasoning, a new architecture emerged.
 
@@ -100,7 +145,7 @@ Through this architecture, four core system pillars emerged.
 
 ---
 
-## 6. Core Pillars of Proofpath
+## 7. Core Pillars of Proofpath
 
 Proofpath is built on four foundational principles.
 
@@ -193,7 +238,7 @@ Together these pillars enable deterministic analysis that improves over time whi
 
 ---
 
-## 7. System Guarantees
+## 8. System Guarantees
 
 Proofpath provides the following guarantees within its defined scope.
 
@@ -247,7 +292,7 @@ The system does not rely on probabilistic interpretation or undocumented inferen
 
 ---
 
-## 8. Trust Model
+## 9. Trust Model
 
 Trust in Proofpath results derives from three properties:
 
@@ -264,7 +309,7 @@ Proofpath does not require trust in the tool itself; results can be independentl
 
 ---
 
-## 9. Failure Model
+## 10. Failure Model
 
 Proofpath is designed to fail loudly when a claim cannot be established.
 
@@ -279,7 +324,7 @@ If a claim cannot be derived within defined bounds, the system reports insuffici
 
 ---
 
-## 10. Intended Domain
+## 11. Intended Domain
 
 The system architecture naturally aligns with high-assurance and mission-critical software environments, where:
 
@@ -292,7 +337,7 @@ Proofpath does not attempt to replace formal verification. Instead, it provides 
 
 ---
 
-## 11. Non-Goals
+## 12. Non-Goals
 
 Proofpath intentionally does not attempt to:
 
@@ -307,7 +352,7 @@ The system focuses exclusively on deterministic structural analysis within bound
 
 ---
 
-## 12. Builder Philosophy
+## 13. Builder Philosophy
 
 The system is guided by the following design values:
 
@@ -320,7 +365,7 @@ The system is guided by the following design values:
 
 ---
 
-## 13. Future Direction
+## 14. Future Direction
 
 Development proceeds through staged maturity:
 
