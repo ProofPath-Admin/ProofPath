@@ -44,35 +44,23 @@ It evolved through repeated failure of prior approaches to achieve reliable soft
 
 Early experimentation revealed fundamental limitations in heuristic and probabilistic approaches:
 
-large codebases exceeded model context capacity
-
-reasoning results were inconsistent
-
-outputs were not reproducible
-
-system behavior was opaque
-
-repeated queries required recomputation
-
-claims lacked verifiable provenance
+- large codebases exceeded model context capacity
+- reasoning results were inconsistent
+- outputs were not reproducible
+- system behavior was opaque
+- repeated queries required recomputation
+- claims lacked verifiable provenance
 
 Each limitation imposed a design constraint that shaped subsequent system architecture.
 
-Failure → Architectural Response
-
-Observed failures produced corresponding architectural responses:
-
-non-reproducible outputs → deterministic reasoning requirement
-
-context limitations → bounded analysis scope
-
-ambiguous interpretations** → structural fact extraction
-
-repeated recomputation → persistent derived fact storage
-
-opaque results → evidence chains and provenance tracking
-
-uncontrolled complexity → normalized program representation
+- Failure → Architectural Response
+- Observed failures produced corresponding architectural responses:
+- non-reproducible outputs → deterministic reasoning requirement
+- context limitations → bounded analysis scope
+- ambiguous interpretations** → structural fact extraction
+- repeated recomputation → persistent derived fact storage
+- opaque results → evidence chains and provenance tracking
+- uncontrolled complexity → normalized program representation
 
 Through this process, the system evolved toward deterministic operation over verifiable inputs.
 
@@ -87,49 +75,74 @@ Development Method
 
 The system is developed through:
 
-small deterministic subsystems
-
-explicit behavioral guarantees
-
-measurable system properties
-
-bounded scope expansion
-
-implementation evidence prior to conceptual expansion
-
-Capability Admission Criteria
+- small deterministic subsystems
+- explicit behavioral guarantees
+- measurable system properties
+- bounded scope expansion
+- implementation evidence prior to conceptual expansion
+- Capability Admission Criteria
 
 New capabilities are introduced only when:
 
-behavior can be defined precisely
-
-inputs and outputs are explicitly specified
-
-execution is reproducible
-
-results can be audited
-
-failure modes are defined
-
+- behavior can be defined precisely
+- inputs and outputs are explicitly specified
+- execution is reproducible
+- results can be audited
+- failure modes are defined
+---
 Explicitly Avoided
 
 The system intentionally avoids:
-
-speculative functionality without defined guarantees
-
-uncontrolled expansion of reasoning scope
-
-implicit system behavior
-
-hidden state or undocumented inference
+- speculative functionality without defined guarantees
+- uncontrolled expansion of reasoning scope
+- implicit system behavior
+- hidden state or undocumented inference
 
 architecture driven solely by conceptual completeness
 
 Architectural decisions prioritize long-term determinism and stability over rapid feature growth.
 
 This implementation discipline ensures Proofpath remains a deterministic system grounded in observable behavior rather than theoretical capability.
+---
 
-## 5. Failure of Heuristic Reasoning
+## 5. Complexity Reduction as a Design Principle
+
+Proofpath is founded on the principle that uncontrolled system complexity prevents reliable reasoning about software.
+
+Modern software systems exhibit:
+- large and evolving codebases
+- implicit behavior across abstraction layers
+- combinatorial interaction surfaces
+- environment-dependent execution
+- non-local effects of program changes
+
+Unbounded complexity produces ambiguity, prevents reproducibility, and makes precise claims about program behavior difficult or impossible.
+
+Proofpath addresses this by systematically reducing complexity into bounded, verifiable structure.
+
+The system reduces complexity through:
+- normalization of structural program representation
+- explicit environment and build constraints
+- bounded reasoning scope
+- elimination of implicit behavior
+- deterministic inference processes
+- explicit provenance and evidence tracking
+
+Rather than increasing analytical sophistication to manage complexity, Proofpath reduces the problem space until deterministic reasoning becomes feasible.
+
+This principle guides all architectural decisions:
+
+- ambiguity is removed rather than interpreted
+- scope is constrained rather than expanded
+- implicit behavior is made explicit
+- unknowns are surfaced rather than hidden
+- insufficient information produces failure rather than approximation
+
+The system therefore operates by transforming large, complex software systems into smaller, bounded domains where verifiable claims can be established.
+
+This complexity reduction principle underlies all core pillars of Proofpath and defines its approach to software analysis.
+
+## 6. Failure of Heuristic Reasoning
 
 A critical realization emerged:
 
@@ -145,7 +158,7 @@ This constraint shaped all subsequent architecture.
 
 ---
 
-## 6. Discovery of Bounded Truth
+## 7. Discovery of Bounded Truth
 
 Further investigation revealed that reliable reasoning about software requires strict environmental constraints.
 
@@ -168,7 +181,7 @@ This became a core principle of Proofpath.
 
 ---
 
-## 7. Emergence of Deterministic Architecture
+## 8. Emergence of Deterministic Architecture
 
 To support bounded deterministic reasoning, a new architecture emerged.
 
@@ -192,7 +205,7 @@ Through this architecture, four core system pillars emerged.
 
 ---
 
-## 7. Core Pillars of Proofpath
+## 9. Core Pillars of Proofpath
 
 Proofpath is built on four foundational principles.
 
@@ -285,7 +298,7 @@ Together these pillars enable deterministic analysis that improves over time whi
 
 ---
 
-## 8. System Guarantees
+## 10. System Guarantees
 
 Proofpath provides the following guarantees within its defined scope.
 
@@ -339,7 +352,7 @@ The system does not rely on probabilistic interpretation or undocumented inferen
 
 ---
 
-## 9. Trust Model
+## 11. Trust Model
 
 Trust in Proofpath results derives from three properties:
 
@@ -356,7 +369,7 @@ Proofpath does not require trust in the tool itself; results can be independentl
 
 ---
 
-## 10. Failure Model
+## 12. Failure Model
 
 Proofpath is designed to fail loudly when a claim cannot be established.
 
@@ -371,7 +384,7 @@ If a claim cannot be derived within defined bounds, the system reports insuffici
 
 ---
 
-## 11. Intended Domain
+## 13. Intended Domain
 
 The system architecture naturally aligns with high-assurance and mission-critical software environments, where:
 
@@ -384,7 +397,7 @@ Proofpath does not attempt to replace formal verification. Instead, it provides 
 
 ---
 
-## 12. Non-Goals
+## 14. Non-Goals
 
 Proofpath intentionally does not attempt to:
 
@@ -399,7 +412,7 @@ The system focuses exclusively on deterministic structural analysis within bound
 
 ---
 
-## 13. Builder Philosophy
+## 15. Builder Philosophy
 
 The system is guided by the following design values:
 
@@ -412,7 +425,7 @@ The system is guided by the following design values:
 
 ---
 
-## 14. Future Direction
+## 16. Future Direction
 
 Development proceeds through staged maturity:
 
