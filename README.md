@@ -34,6 +34,7 @@ Scope: Build clang-18.1.0 -O2
 ```
 **Query:**  
 Does function A call function C?
+
 **Result**
 ```
 Status: FALSE
@@ -42,6 +43,7 @@ Scope: Build clang-18.1.0 -O2
 ```
 **Query:**  
 Can user input reach this memory write?
+
 **Result**
 ```
 Status: UNKNOWN
