@@ -94,3 +94,5 @@ But my idea's didn't and don't stop there. I have a vision of where this can go,
 The gravity of it isn't lost on me. This is something that can potentially develop into a company that has international clients if driven correctly by not just myself but future business partners and implementation is strong. Me, a fuck up for most of my life has accidentally stumbled onto something oustandingly valuable. Realistically it's not google or facebook or netflix, not even close. It has a small client base and the problem is HARD. It's probably going to take 10 years to go from now to a mature product with scope large enough that it needs a team to drive it. It honestly scares me. I have zero people in my “team” that even understand this concept or are pushing me. Let's just throw in a little bit of zero formal education.
 
 In the words of Linus the Linux developer “How hard can it be?”.
+
+ChatGPT: timeline from chat records is ~ mid-2025 → early-2026 (≈ 6–9 months evolution).
