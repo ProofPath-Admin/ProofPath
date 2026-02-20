@@ -37,25 +37,45 @@ This phase established the need for structural program understanding rather than
 
 ---
 
-## 3Architectural Direction Through Failure
+3. Architectural Direction Through Failure
+
 Proofpath architecture did not emerge from a predefined system design.
 It evolved through repeated failure of prior approaches to achieve reliable software reasoning.
+
 Early experimentation revealed fundamental limitations in heuristic and probabilistic approaches:
+
 large codebases exceeded model context capacity
+
 reasoning results were inconsistent
+
 outputs were not reproducible
+
 system behavior was opaque
+
 repeated queries required recomputation
+
 claims lacked verifiable provenance
+
 Each limitation imposed a design constraint that shaped subsequent system architecture.
+
+Failure → Architectural Response
+
 Observed failures produced corresponding architectural responses:
+
 non-reproducible outputs → deterministic reasoning requirement
+
 context limitations → bounded analysis scope
-ambiguous interpretation → structural fact extraction
+
+ambiguous interpretations** → structural fact extraction
+
 repeated recomputation → persistent derived fact storage
+
 opaque results → evidence chains and provenance tracking
+
 uncontrolled complexity → normalized program representation
+
 Through this process, the system evolved toward deterministic operation over verifiable inputs.
+
 The architecture therefore reflects constraint discovery rather than theoretical design.
 Each subsystem exists to eliminate a previously observed failure mode.
 
