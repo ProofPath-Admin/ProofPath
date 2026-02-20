@@ -1,7 +1,7 @@
 ****
 Disclaimer
 ****
-This is word vomit, it's completely raw and unpolished. I am a blunt and to the point person in real life, and I'm Australian. There is nothing here that other documents don't provide more coherently.
+This is word vomit, it's completely raw and unpolished. I am a blunt and to the point person in real life, and I'm Australian. There is nothing here that other documents don't provide more coherently and without swearing.
 ****
  
  An exploration of Deterministic software analysis and ADHD word vomit.
