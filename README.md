@@ -23,33 +23,24 @@ In other words it proves what exists, doesn't guess what it cannot prove and unk
 
 ## Example answers Proofpath may give:
 ---
-
 **Query:**  
 Does function A call function B?
-
 **Result**
 ```
 Status: PROVEN
 Evidence: Call expression found in A at src/foo.cpp:128
 Scope: Build clang-18.1.0 -O2
 ```
-
-### ✘ False
-
 **Query:**  
 Does function A call function C?
-
 **Result**
 ```
 Status: FALSE
 Evidence: No call path found in extracted call graph
 Scope: Build clang-18.1.0 -O2
 ```
-### ? Unknown
-
 **Query:**  
 Can user input reach this memory write?
-
 **Result**
 ```
 Status: UNKNOWN
