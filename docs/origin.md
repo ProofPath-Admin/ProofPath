@@ -37,7 +37,7 @@ This phase established the need for structural program understanding rather than
 
 ---
 
-3. Architectural Direction Through Failure
+## 3. Architectural Direction Through Failure
 
 Proofpath architecture did not emerge from a predefined system design.
 It evolved through repeated failure of prior approaches to achieve reliable software reasoning.
@@ -80,27 +80,54 @@ The architecture therefore reflects constraint discovery rather than theoretical
 Each subsystem exists to eliminate a previously observed failure mode.
 
 ## 4. Implementation Discipline and Architectural Stability
+
 Proofpath development follows strict implementation constraints to prevent architectural drift and uncontrolled system complexity.
+
+Development Method
+
 The system is developed through:
+
 small deterministic subsystems
+
 explicit behavioral guarantees
+
 measurable system properties
+
 bounded scope expansion
+
 implementation evidence prior to conceptual expansion
+
+Capability Admission Criteria
+
 New capabilities are introduced only when:
-their behavior can be defined precisely
-their inputs and outputs are explicitly specified
-their execution is reproducible
-their results can be audited
-their failure modes are defined
-Architectural decisions prioritize long-term determinism and stability over rapid feature growth.
-The system explicitly avoids:
+
+behavior can be defined precisely
+
+inputs and outputs are explicitly specified
+
+execution is reproducible
+
+results can be audited
+
+failure modes are defined
+
+Explicitly Avoided
+
+The system intentionally avoids:
+
 speculative functionality without defined guarantees
+
 uncontrolled expansion of reasoning scope
+
 implicit system behavior
+
 hidden state or undocumented inference
+
 architecture driven solely by conceptual completeness
-This implementation discipline ensures that Proofpath remains a deterministic system grounded in observable behavior rather than theoretical capability.
+
+Architectural decisions prioritize long-term determinism and stability over rapid feature growth.
+
+This implementation discipline ensures Proofpath remains a deterministic system grounded in observable behavior rather than theoretical capability.
 
 ## 5. Failure of Heuristic Reasoning
 
